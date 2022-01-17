@@ -1,7 +1,11 @@
 <template>
   <div class="timesheet-list">
-    <h1>Previous Timesheets</h1>
-    <Timesheet/>
+    <div>
+      <h1>Previous Timesheets</h1>
+    </div>
+    <div class="timesheet-container">
+      <Timesheet/>
+    </div>
   </div>
 </template>
 
@@ -18,6 +22,15 @@ export default {
 
 <style>
   .timesheet-list {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    /*text-align: center;*/
+    padding: 0 15px 0 15px;
+  }
+  .timesheet-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 </style>

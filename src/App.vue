@@ -1,27 +1,62 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/previous-timesheets">Previous Timesheets</router-link>
+  <div class="header">
+    <!-- header -->
   </div>
-  <router-view/>
+  <div class="body-box">
+    <div id="nav" class="sidebar">
+      <Sidebar/>
+    </div>
+    <div class="content-box">
+      <router-view/>
+    </div>
+  </div>
+  <div class="footer">
+    <!-- footer -->
+  </div>
 </template>
 
+<script>
+import Sidebar from '@/components/Sidebar.vue'
+export default {
+  components: {
+    Sidebar
+  }
+}
+</script>
 <style>
+  body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .body-box {
+    flex-grow: 1;
+    display: flex;
+  }
+  .content-box {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  /*text-align: center;*/
   color: #2c3e50;
 }
 
 #nav {
-  padding: 30px;
+  padding: 30px 10px 10px 30px;
 }
 
 #nav a {
   font-weight: bold;
   color: #2c3e50;
+  text-decoration: none;
 }
 
 #nav a.router-link-exact-active {
