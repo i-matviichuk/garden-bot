@@ -36,6 +36,8 @@ export default {
     display: flex;
   }
   .content-box {
+    overflow: scroll;
+    height: 100vh;
     flex-grow: 1;
     display: flex;
     flex-direction: column;

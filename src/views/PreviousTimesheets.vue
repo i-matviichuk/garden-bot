@@ -1,7 +1,7 @@
 <template>
   <div class="timesheet-list">
     <div>
-      <h1>Previous Timesheets</h1>
+      <h1>Timesheets</h1>
     </div>
     <div class="timesheet-container">
       <Timesheet/>
@@ -30,7 +30,8 @@ export default {
   }
   .timesheet-container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    /*flex-direction: column;*/
     align-items: center;
   }
 </style>
