@@ -9,6 +9,7 @@
 import AddTimesheet from '@/components/AddTimesheet.vue'
 export default {
   name: 'Home',
+
   components: {
     AddTimesheet
   }
