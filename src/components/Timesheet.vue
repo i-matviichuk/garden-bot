@@ -1,5 +1,5 @@
 <template>
-  <div v-for="(timesheet, id) in timesheetsData.timesheets" :key="id" class="timesheet">
+  <div v-for="(timesheet, id) in timesheets" :key="id" class="timesheet">
     <div class="date-row">
       <div class="date">{{ timesheet.date }}</div>
       <div class="date">Day</div>
@@ -63,7 +63,7 @@ import timesheetsData from '../data.json'
 export default {
   data () {
     return {
-      timesheetsData
+      timesheets: timesheetsData.timesheets
     }
   }
 }
